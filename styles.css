@@ -1,3 +1,5 @@
+@import url("//fonts.googleapis.com/css2?family=Alata:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+
 body {
     background-color: #2b2d35;
     padding-top: 25px;
@@ -7,12 +9,25 @@ body {
     border-radius: 4px
 }
 
+.header {
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+    margin: auto auto 24px;
+    color: #fff;
+    font-family: "Alata", sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    border-bottom-color: #fff;
+    border-bottom-style: solid;
+    border-bottom-width: 2px
+}
+
 .image {
     display: block;
     margin: 2px auto;
     width: 100%;
     max-width: 1000px;
-    transform: translatex(0) translatey(0);
     border-width: 4px;
     border-style: solid
 }
