@@ -12,5 +12,5 @@ images = data["page1_data"].split(",")
 for img in images:
     count += 1
     img_data = requests.get(img).content
-    with open('img'+str(count)+'.jpg', 'wb') as handler:
+    with open('images/img'+str(count)+'.jpg', 'wb') as handler:
         handler.write(img_data)
