@@ -5,7 +5,7 @@ sessionStorage.clear()
 images = [];
 next_page = document.getElementsByClassName("btn next_page")[0];
 
-for (var i = 0; i < 10; i++) {
+for (var i = 0; i < 100; i++) {
     img = document.getElementById("image-" + i);
     if (img != null) {
         images.push(img.getAttribute("src"));
