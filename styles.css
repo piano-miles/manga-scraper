@@ -1,6 +1,18 @@
-.a {
+body {
+    background-color: #2b2d35;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin: 16px 8px;
+    box-shadow: 0 0 19px 0#000 inset;
+    border-radius: 4px
+}
+
+.image {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
+    margin: 2px auto;
+    width: 100%;
+    max-width: 1000px;
+    transform: translatex(0) translatey(0);
+    border-width: 4px;
+    border-style: solid
 }
