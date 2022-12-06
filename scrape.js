@@ -32,7 +32,7 @@ next_page = document.getElementById("btnNext");
 
 b = document.getElementById("centerDivVideo");
 c = b.querySelectorAll("img");
-for (var i=0; i<b.childElementCount-1; i++) {
+for (var i = 0; i < b.childElementCount - 1; i++) {
     images.push(c[i].getAttribute('src'));
 }
 
