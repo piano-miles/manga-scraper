@@ -10,5 +10,25 @@
     "background": {
         "service_worker": "scripts/background.js",
         "type": "module"
-    }
+    },
+    "icons": {
+        "32": "ext_imgs/ext_ico_32.png",
+        "64": "ext_imgs/ext_ico_64.png",
+        "128": "ext_imgs/ext_ico_128.png",
+        "512": "ext_imgs/ext_ico_large.png"
+    },
+    "content_scripts": [
+        {
+            "js": [
+                "scripts/content.js"
+            ],
+            "matches": [
+                "https://mangaclash.com/*",
+                "https://kissmanga.org/*",
+                "https://developer.chrome.com/*",
+                "https://developer.chrome.com/docs/extensions/*",
+                "https://developer.chrome.com/docs/webstore/*"
+            ]
+        }
+    ]
 }
