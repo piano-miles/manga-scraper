@@ -18,5 +18,5 @@ def download():
                 c += 1
                 print('Downloading '+str(c))
                 img_data = requests.get(img).content
-                with open('imgs/img'+str(c)+'.jpg', 'wb') as handler:
+                with open('images/img'+str(c)+'.jpg', 'wb') as handler:
                     handler.write(img_data)
