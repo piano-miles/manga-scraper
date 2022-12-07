@@ -8,7 +8,7 @@ def write(title):
     for C in range(41):
         A += '<img src="imgs/img'+str(C+1)+'.jpg" class="image">'
 
-    B = open('index.html', 'w')
+    B = open('page.html', 'w')
     #B.write(
     #    BeautifulSoup(A+'</body></html>',
     #                  'html.parser').prettify(formatter=HTMLFormatter(indent=4))

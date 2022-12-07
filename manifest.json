@@ -1,0 +1,10 @@
+{
+    "manifest_version": 3,
+    "name": "Manga Scraper",
+    "description": "A little tool for scraping manga.",
+    "version": "0.0.0",
+    "action": {
+      "default_popup": "hello.html",
+      "default_icon": "hello_extensions.png"
+    }
+  }
