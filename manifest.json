@@ -5,7 +5,7 @@
     "version": "0.0.0",
     "action": {
         "default_popup": "popup.html",
-        "default_icon": "ext_ico.png"
+        "default_icon": "ext_imgs/ext_ico_64.png"
     },
     "background": {
         "service_worker": "scripts/background.js",
