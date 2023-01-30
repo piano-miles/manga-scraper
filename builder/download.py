@@ -1,22 +1,36 @@
 import requests
 import json
+import os
+from os import path
+from tqdm import tqdm
 
-data = ''
-
-def load(file):
+def download(file):
     f = open(file)
     data = json.load(f)
     f.close()
 
-def download():
-    c = 0
-    for i in range(len(data)):
-        imgs = data['page'+str(1+i)+'_data'].split(',')
+    if not path.exists('images'):
+        os.mkdir(os.getcwd()+'/images')
+        print('Created image directory.')
+    else:
+        print('Image directory exists.')
 
-        for img in imgs:
-            if 'http' in img:
-                c += 1
-                print('Downloading '+str(c))
+    imgs = []
+    for i in range(len(data)):
+        for j in data['page'+str(1+i)+'_data'].split(','):
+            imgs.append(j)
+
+    c = 0
+    print('Downloading images.')
+    for img in tqdm(imgs):
+        if 'http' in img:
+            c += 1
+
+            try:
                 img_data = requests.get(img).content
-                with open('images/img'+str(c)+'.jpg', 'wb') as handler:
-                    handler.write(img_data)
+            except Exception as e:
+                print("An error occurred when fetching the images.\n"+str(e))
+                quit()
+
+            with open('images/img'+str(c)+'.jpg', 'wb') as handler:
+                handler.write(img_data)

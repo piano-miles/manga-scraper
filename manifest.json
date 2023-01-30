@@ -25,6 +25,7 @@
             "matches": [
                 "https://mangaclash.com/*",
                 "https://kissmanga.org/*",
+                "https://www.webtoons.com/*",
                 "https://developer.chrome.com/*",
                 "https://developer.chrome.com/docs/extensions/*",
                 "https://developer.chrome.com/docs/webstore/*"

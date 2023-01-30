@@ -1,1 +1,3 @@
 images/
+builder/__pycache__
+*.pyc

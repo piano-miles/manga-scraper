@@ -1,6 +1,5 @@
-import builder.download as download
-import builder.pagewriter as pagewriter
+import download
+import pagewriter
 
-download.load("storage.json")
-download.download()
-pagewriter.write("manhera")
+download.download("builder/storage.json")
+pagewriter.write("Omniscient Reader")
