@@ -51,7 +51,6 @@ next_page.click();
 
 // webtoons.com
 images = [];
-//next_page = document.getElementsByClassName("btn next_page")[0];
 next_url = document.getElementsByClassName("pg_next")[0].getAttribute("href");
 imgs = document.getElementsByClassName("_images");
 
