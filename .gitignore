@@ -1,3 +1,4 @@
 images/
 builder/__pycache__
 *.pyc
+builder/storage.json
