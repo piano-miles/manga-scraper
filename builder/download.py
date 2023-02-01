@@ -22,12 +22,13 @@ def download(file):
 
     c = 0
     print('Downloading images.')
+    H = {'referer': 'https://www.webtoons.com/en/action/omniscient-reader/episode-23/viewer?title_no=2154&episode_no=24'}
     for img in tqdm(imgs):
         if 'http' in img:
             c += 1
 
             try:
-                img_data = requests.get(img).content
+                img_data = requests.get(img, headers=H).content
             except Exception as e:
                 print("An error occurred when fetching the images.\n"+str(e))
                 quit()
