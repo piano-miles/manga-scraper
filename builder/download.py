@@ -3,6 +3,7 @@ import json
 import os
 from os import path
 from tqdm import tqdm
+import time
 
 def download(file):
     f = open(file)
@@ -35,3 +36,6 @@ def download(file):
 
             with open('images/img'+str(c)+'.jpg', 'wb') as handler:
                 handler.write(img_data)
+            
+            if c%45==0:
+                time.sleep(5) # Prevent over-requesting
