@@ -6,21 +6,17 @@ from tqdm import tqdm
 import time
 
 def download(file):
-    f = open(file)
-    data = json.load(f)
-    f.close()
-
+    with open(file) as f:
+        data = json.load(f)
     if not path.exists('images'):
-        os.mkdir(os.getcwd()+'/images')
+        os.mkdir(f'{os.getcwd()}/images')
         print('Created image directory.')
     else:
         print('Image directory exists.')
 
     imgs = []
     for i in range(len(data)):
-        for j in data['page'+str(1+i)+'_data'].split(','):
-            imgs.append(j)
-
+        imgs.extend(iter(data[f'page{str(1 + i)}_data'].split(',')))
     c = 0
     print('Downloading images.')
     H = {'referer': 'https://www.webtoons.com/en/action/omniscient-reader/episode-23/viewer?title_no=2154&episode_no=24'}
@@ -34,8 +30,8 @@ def download(file):
                 print("An error occurred when fetching the images.\n"+str(e))
                 quit()
 
-            with open('images/img'+str(c)+'.jpg', 'wb') as handler:
+            with open(f'images/img{c}.jpg', 'wb') as handler:
                 handler.write(img_data)
-            
+
             if c%45==0:
                 time.sleep(5) # Prevent over-requesting
